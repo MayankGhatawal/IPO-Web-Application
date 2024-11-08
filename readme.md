@@ -42,7 +42,7 @@ Key features of the application include:
   - Responsive design (Bootstrap, Material UI)
   
 - **Backend:**
-  - Node.js with Express (or any other suitable backend framework)
+  - Django 5.0.2 (or any other suitable backend framework)
   - RESTful API
   - Database: (MongoDB, MySQL, or PostgreSQL - depending on project needs)
   
