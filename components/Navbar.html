@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Header</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .navbar-brand img {
+      height: 30px;
+      margin-right: 8px;
+    }
+    .btn-signup {
+      background-color: #3a82f7;
+      color: #fff;
+      border: none;
+    }
+    .badge-new {
+      font-size: 0.7rem;
+      color: white;
+      background-color: #3a82f7;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="../assets/logo/logo.png" alt="Bluestock Logo">
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">IPO</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Community</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Products
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="productsDropdown">
+            <li><a class="dropdown-item" href="#">Product 1</a></li>
+            <li><a class="dropdown-item" href="#">Product 2</a></li>
+            <li><a class="dropdown-item" href="#">Product 3</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Brokers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Live News <span class="badge-new">NEW</span></a>
+        </li>
+      </ul>
+
+      <!-- Right side options -->
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Sign In</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-signup" href="#">Sign Up Now</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="bi bi-grid-3x3-gap-fill"></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
