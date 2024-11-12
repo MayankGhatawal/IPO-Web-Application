@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f8f9fa;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .or-separator {
+            text-align: center;
+            font-family: poppins;
+            outline: none;
+            margin: 1.5rem 0;
+            font-size: 0.9rem;
+            color: #888;
+            background-color: #F4F5F7;
+        }
+
+        .signup-form {
+            width: 100%;
+            max-width: 400px;
+            padding: 2rem;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .signup-form h4 {
+            text-align: center;
+            margin-bottom: 1rem;
+            text-shadow: 1px 4px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .signup-form .form-control:focus {
+            box-shadow: none;
+            border-color: #000000;
+        }
+
+        .signup-form .form-control {
+            box-shadow: 1px 4px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .signup-form .btn-primary {
+            background-color: #6c63ff;
+            border-color: #6c63ff;
+        }
+
+        .signup-form input {
+            width: 100%;
+            padding: 10px;
+            outline-color: #333;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+
+        }
+
+        .signup-form .btn-primary {
+            border-radius: 10px;
+            margin-bottom: 25px;
+        }
+
+        .signup-form .btn-primary:hover {
+            background-color: #5948d9;
+            border-color: #5948d9;
+
+        }
+
+        .or-separator {
+            text-align: center;
+            font-size: 0.9rem;
+            width: 150px;
+            height: 25px;
+            color: #888;
+            border-radius: 10px;
+        }
+
+        .google-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f5f5f5;
+            color: #333;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+
+        .google-btn img {
+            width: 18px;
+            margin-right: 10px;
+        }
+
+        .footer-link {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .g-recaptcha {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 20px;
+            height: 60px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-bottom: 20px;
+            background-color: #4CAF50;
+
+        }
+
+        .terms-of-service {
+            font-size: 12px;
+            color: #999;
+            font-family: Arial, sans-serif;
+        }
+
+        .terms-of-service a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .form-row {
+            text-align: center;
+        }
+
+        .button-toggle {
+            background-color: #5D12D2;
+        }
+
+        .google {
+            box-shadow: 1px 4px 2px rgba(0, 0, 0, 0.1);
+            margin-top: 25px;
+        }
+
+        .input-group-append {
+            box-shadow: 1px 4px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .ewlw {
+            text-shadow: 1px 4px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .recaptcha-logo img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .eye {
+            cursor: pointer;
+            outline: none;
+        }
+
+        .recaptcha-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #d3d3d3;
+            border-radius: 10px;
+            padding: 10px 10px;
+            width: 280px;
+            box-shadow: 1px 4px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .checkbox {
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+        }
+
+        .checkbox input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            margin: 0;
+        }
+
+        .text {
+            padding-top: 6px;
+            flex-grow: 1;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .recaptcha-logo {
+            display: flex;
+            align-items: center;
+            font-size: 19px;
+            color: #555;
+        }
+
+        p {
+            width: 100%;
+            font-size: smaller;
+            font-family: thin, 100;
+            text-align: center;
+            color: #999DA3;
+            border-bottom: 1px solid #4B5768;
+            line-height: 0.1em;
+        }
+
+        p span {
+            box-shadow: 1px 4px 2px rgba(0, 0, 0, 0.1);
+            background-color: #F4F5F7;
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="signup-form">
+        <div class="text-center mb-4">
+            <img src="../assets/logo/logo.png" alt="Bluestock Logo" style="width: 150px;">
+        </div>
+        <h4>Create an account</h4>
+        <form id="signupForm" onsubmit="return validateForm()">
+            <div class="form-group">
+                <label class="ewlw" for="name">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Saisha Wagh" required>
+                <small class="text-danger" id="nameError"></small>
+            </div>
+            <div class="form-group">
+                <label class="ewlw" for="email">Email Address</label>
+                <input type="email" class="form-control" id="email" placeholder="hello@bluestock.in" required>
+                <small class="text-danger" id="emailError"></small>
+            </div>
+            <div class="form-group">
+                <label class="ewlw" for="password">Password</label>
+                <div class="input-group">
+                    <input type="password" class="form-control" id="password" placeholder="Password" required
+                        minlength="6">
+                    <div class="input-group-append">
+                        <button class="eye btn btn-outline-secondary" type="button" onclick="togglePassword()">
+                            <i class="fas fa-eye" id="togglePasswordIcon"></i>
+                        </button>
+                    </div>
+                </div>
+                <small class="text-danger" id="passwordError"></small>
+            </div>
+            <div class="terms-of-service">
+                By continuing, you agree to our <a href="https://bluestock.in/services/">terms of service</a>.
+            </div>
+
+            <div class="recaptcha-container">
+                <div class="checkbox">
+                    <input type="checkbox" id="robot-check">
+                </div>
+                <label class="text" for="robot-check">I'm not a robot</label>
+                <div class="recaptcha-logo">
+                    <img src="../assets/logo/recaptcha.png" alt="reCaptcha">
+                </div>
+            </div>
+
+            <button type="submit" class="button-toggle btn btn-primary btn-block">Sign up</button>
+        </form>
+        <p><span>or sign up with</span></p>
+        <a href="https://accounts.google.com/v3/signin/identifier?authuser=0&continue=https%3A%2F%2Fmail.google.com%2Fmail&ec=GAlAFw&hl=en-GB&service=mail&flowName=GlifWebSignIn&flowEntry=AddSession&dsh=S-937970192%3A1731418889627601&ddm=1"
+            style="text-decoration: none;">
+            <button class="google btn google-btn btn-block">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/2048px-Google_%22G%22_logo.svg.png"
+                    alt="Google logo">
+                Continue with Google
+            </button>
+        </a>
+        <div class="footer-link">
+            <small>Already have an account? <a href="./Login/index.html">Sign in here</a></small>
+        </div>
+    </div>
+
+    <script>
+        function validateForm() {
+            let valid = true;
+
+            // Clear previous errors
+            document.getElementById("nameError").textContent = "";
+            document.getElementById("emailError").textContent = "";
+            document.getElementById("passwordError").textContent = "";
+
+            // Name validation
+            const name = document.getElementById("name").value.trim();
+            if (name === "") {
+                document.getElementById("nameError").textContent = "Name is required.";
+                valid = false;
+            }
+
+            // Email validation
+            const email = document.getElementById("email").value.trim();
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                document.getElementById("emailError").textContent = "Please enter a valid email address.";
+                valid = false;
+            }
+
+            // Password validation
+            const password = document.getElementById("password").value;
+            if (password.length < 6) {
+                document.getElementById("passwordError").textContent = "Password must be at least 6 characters long.";
+                valid = false;
+            }
+
+            return valid;
+        }
+
+        function togglePassword() {
+            const passwordField = document.getElementById("password");
+            const toggleIcon = document.getElementById("togglePasswordIcon");
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                toggleIcon.classList.remove("fa-eye");
+                toggleIcon.classList.add("fa-eye-slash");
+            } else {
+                passwordField.type = "password";
+                toggleIcon.classList.remove("fa-eye-slash");
+                toggleIcon.classList.add("fa-eye");
+            }
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+</body>
+
+</html>
