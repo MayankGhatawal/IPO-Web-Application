@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main{
+    max-height: 100vh;
+    display: flex;
+    gap: 50%;
+}
+
+.right-side{
+    margin-top: 50%;
+    width: 450px;
+    height: auto;
+}
