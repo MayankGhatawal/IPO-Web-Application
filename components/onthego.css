@@ -1,17 +1,113 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-.main{
-    max-height: 100vh;
+body {
+    font-family: poppins, serif;
     display: flex;
-    gap: 50%;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f8f8f8;
 }
 
-.right-side{
-    margin-top: 50%;
-    width: 450px;
-    height: auto;
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    gap: 50px;
+    align-items: center;
+}
+
+/* Left Section: Text and QR Code */
+.text-qr-section {
+    flex: 1;
+    color: #333;
+}
+
+.text-qr-section h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.text-qr-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.qr-download {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.qr-image {
+    width: 100px;
+    mix-blend-mode: multiply;
+    height: 100px;
+}
+
+.download-text h3 {
+    margin-top: 40px;
+    color: #1a73e8;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.download-text p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Right Section: Phone Image */
+.phone-image-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.phone-image {
+    width: 80%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .text-qr-section {
+        text-align: center;
+    }
+
+    .phone-image {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-qr-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .text-qr-section p {
+        font-size: 1rem;
+    }
+
+    .download-text h3 {
+        font-size: 1.1rem;
+    }
+
+    .download-text p {
+        font-size: 0.9rem;
+    }
 }
