@@ -1,0 +1,532 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Color Variables */
+:root {
+    --primary-color: #1A73E8;
+    --text-color: #111111;
+    --hover-text-color: #333;
+    --bg-color:FFFFFF;
+}
+
+/* Background styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    height: 100%;
+}
+
+/* Navbar container */
+.navbar {
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    top: 0;
+    left: 0;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 20px 5px rgba(0, 0, 0, 0.02);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    z-index: 1000;
+}
+
+/* Logo */
+.navbar .logo {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 67.5px;
+    text-align: left;
+    padding-left: 10px;
+}
+.logo img {
+    margin-top: 15px;
+    width: 45px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+/* Navigation links container */
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+/* Navbar links */
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    position: relative;
+    transition: color 0.3s;
+}
+
+/* Dropdown and external link indicators */
+.nav-links a.products::after {
+    content: ' ▼';
+    font-size: 0.75rem;
+}
+
+.nav-links a.brokers::after {
+    content: ' ↗';
+    font-size: 0.75rem;
+}
+
+/* "NEW" tag */
+.nav-links .new-link {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+/* Sign In and Sign Up buttons */
+.auth-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.auth-buttons a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    transition: color 0.3s;
+}
+
+.auth-buttons .sign-up {
+    color: #fff;
+    background-color: var(--primary-color);
+    border-radius: 4px;
+}
+
+.auth-buttons .sign-up:hover {
+    background-color: #1558b0;
+}
+
+/* Hover effect */
+.nav-links a:hover, .auth-buttons a:hover {
+    color: var(--hover-text-color);
+}
+
+/* Container for main content */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+.container h1{
+    text-align: left;
+    color: var(--text-color);
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.content {
+    display: flex;
+    gap: 20px;
+}
+.black{
+    color: var(--text-color);
+    font-weight: bold;
+}
+/* Sidebar styling */
+.sidebar {
+    /*position: fixed;*/
+    /*left: 35px;*/
+    /*z-index: 1000;*/
+    margin-top: 20px;
+    width: 25%;
+    height: 100%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 30px;
+    border: 1px solid #3b76c2;
+    padding-bottom: 120px;
+}
+
+.sidebar h2 {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    font-size: 1rem;
+    margin-right: 10px;
+    padding: 5px 0;
+    cursor: pointer;
+    color: #333;
+}
+
+.sidebar li:hover {
+    color: #0070f3;
+}
+span{
+    padding-left: 20px;
+    color: #1a92e8;
+}
+
+/* Active state for sidebar links */
+.sidebar li.active {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Main content styling */
+.main-content {
+
+    margin-top: 20px;
+    height: 100%;
+    width: 75%;
+    padding:15px;
+    background-color: #fff;
+    border-radius: 30px;
+    border: 1px solid var(--primary-color);
+}
+
+
+.image-placeholder {
+    width: 40%;
+    height: 200px;
+    background-color: #ccc;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    margin-left: 30px;
+}
+.main-content h3 {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #333;
+
+}
+.main-content h2{
+    margin-left: 30px;
+}
+hr{
+    height: 3px;
+}
+
+.main-content ul {
+    list-style: disc;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.main-content ul li {
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+    .sidebar, .main-content {
+        width: 100%;
+    }
+}
+
+/* Accessibility: Focus State */
+a:focus, .sidebar li:focus {
+    outline: 2px solid var(--primary-color);
+}
+
+
+
+.main-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: -5px;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    border-radius: 10px;
+    line-height: 1.6;
+}
+
+/* Headings */
+h1, h2, h3 {
+    color: #1A73E8;
+}
+h4{
+    padding-bottom: 25px;
+
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+/* Paragraphs */
+p {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Unordered lists */
+ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Horizontal line */
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 30px 0;
+}
+
+/* Feedback section */
+.feedback-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.feedback-section p {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.feedback-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.feedback-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.feedback-buttons button {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.like-button {
+    color: #1A73E8;
+}
+
+.dislike-button {
+    color: #e74c3c;
+}
+
+.feedback-buttons button:hover {
+    transform: scale(1.2);
+}
+
+.count {
+    font-size: 1rem;
+    color: #333;
+    font-weight: bold;
+}
+
+.main-content1{
+    margin-top: 50px;
+    height: 100%;
+    width: 75%;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 30px;
+    border: 1px solid var(--primary-color);
+    margin-left: 310px;
+
+}
+.line-main{
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+.svg{
+    margin-top: 13px;: ;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .main-container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+    }
+
+    .feedback-buttons button {
+        font-size: 1.2rem;
+    }
+}
+
+.main-container h2{
+    color: black;
+}
+
+
+.container1 {
+    width: 500px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.heading {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff;
+    text-align: center;
+}
+
+.item {
+    margin-bottom: 10px;
+    padding-left: 40px;
+}
+
+.circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ffc107;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.dashed-line {
+    border-bottom: 1px dashed #000;
+    width: 30px;
+    margin: 0 auto;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Main Content (For What is Moving Average?) */
+.module-main {
+    flex: 2;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.module-main h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #004aad;
+    margin-bottom: 20px;
+}
+
+.module-main .module-image {
+    width: 100%;
+    height: 150px;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.module-main p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Divider */
+.module-main hr {
+    border: 0;
+    height: 1px;
+    background: #e0e0e0;
+    margin: 20px 0;
+}
+
+/* Feedback Section */
+.feedback {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.feedback p {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+
+.sidebar1 {
+    margin-top: 20px;
+    width: 25%;
+}

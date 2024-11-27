@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPO Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="dash.css">
+</head>
+<body>
+<div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="brand">
+            <span class="brand-logo">BF</span>
+            <span class="brand-name">Bluestock Fintech</span>
+
+        </div>
+        <hr>
+
+
+        <nav class="menu">
+            <p class="menu-section">MENU</p>
+            <ul>
+                <li >
+                    <a href="dash.html">
+                        <i class="fa-solid fa-chart-pie"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="manageipo.html">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span>Manage IPO</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-bars"></i>
+                        <span>IPO Subscription</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-comment-dots"></i>
+                        <span>IPO Allotment</span>
+                    </a>
+                </li>
+            </ul>
+            <p class="menu-section-other">OTHERS</p>
+            <ul>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-gear"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-server"></i>
+                        <span>API Manager</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Accounts</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-circle-info"></i>
+                        <span>Help</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main content -->
+    <main class="main-content" >
+        <header class="header">
+            <div class="search-bar">
+                <input type="text" placeholder="Search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+
+            <div class="user-info">
+                <svg width="220" height="32" viewBox="0 0 220 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="16" cy="16" r="16" fill="#FFE6CC"/>
+                    <path d="M18.448 9.848L14.24 21H12.56L8.352 9.848H9.904L13.408 19.464L16.912 9.848H18.448Z" fill="white"/>
+                    <path d="M51.368 12.636V21H50.276V17.208H46.016V21H44.924V12.636H46.016V16.308H50.276V12.636H51.368ZM54.2966 13.356C54.0886 13.356 53.9126 13.284 53.7686 13.14C53.6246 12.996 53.5526 12.82 53.5526 12.612C53.5526 12.404 53.6246 12.228 53.7686 12.084C53.9126 11.94 54.0886 11.868 54.2966 11.868C54.4966 11.868 54.6646 11.94 54.8006 12.084C54.9446 12.228 55.0166 12.404 55.0166 12.612C55.0166 12.82 54.9446 12.996 54.8006 13.14C54.6646 13.284 54.4966 13.356 54.2966 13.356ZM54.8246 14.424V21H53.7326V14.424H54.8246ZM58.3137 19.488L56.9697 22.716H56.2377L57.1137 19.488H58.3137ZM70.6758 12.636L67.5198 21H66.2598L63.1038 12.636H64.2678L66.8958 19.848L69.5238 12.636H70.6758ZM72.9372 13.356C72.7292 13.356 72.5532 13.284 72.4092 13.14C72.2652 12.996 72.1932 12.82 72.1932 12.612C72.1932 12.404 72.2652 12.228 72.4092 12.084C72.5532 11.94 72.7292 11.868 72.9372 11.868C73.1372 11.868 73.3052 11.94 73.4412 12.084C73.5852 12.228 73.6572 12.404 73.6572 12.612C73.6572 12.82 73.5852 12.996 73.4412 13.14C73.3052 13.284 73.1372 13.356 72.9372 13.356ZM73.4652 14.424V21H72.3732V14.424H73.4652ZM78.1543 21.108C77.6503 21.108 77.1983 21.024 76.7983 20.856C76.3983 20.68 76.0823 20.44 75.8503 20.136C75.6183 19.824 75.4903 19.468 75.4663 19.068H76.5943C76.6263 19.396 76.7783 19.664 77.0503 19.872C77.3303 20.08 77.6943 20.184 78.1423 20.184C78.5583 20.184 78.8863 20.092 79.1263 19.908C79.3663 19.724 79.4863 19.492 79.4863 19.212C79.4863 18.924 79.3583 18.712 79.1023 18.576C78.8463 18.432 78.4503 18.292 77.9143 18.156C77.4263 18.028 77.0263 17.9 76.7143 17.772C76.4103 17.636 76.1463 17.44 75.9223 17.184C75.7063 16.92 75.5983 16.576 75.5983 16.152C75.5983 15.816 75.6983 15.508 75.8983 15.228C76.0983 14.948 76.3823 14.728 76.7503 14.568C77.1183 14.4 77.5383 14.316 78.0103 14.316C78.7383 14.316 79.3263 14.5 79.7743 14.868C80.2223 15.236 80.4623 15.74 80.4943 16.38H79.4023C79.3783 16.036 79.2383 15.76 78.9823 15.552C78.7343 15.344 78.3983 15.24 77.9743 15.24C77.5823 15.24 77.2703 15.324 77.0383 15.492C76.8063 15.66 76.6903 15.88 76.6903 16.152C76.6903 16.368 76.7583 16.548 76.8943 16.692C77.0383 16.828 77.2143 16.94 77.4223 17.028C77.6383 17.108 77.9343 17.2 78.3103 17.304C78.7823 17.432 79.1663 17.56 79.4623 17.688C79.7583 17.808 80.0103 17.992 80.2183 18.24C80.4343 18.488 80.5463 18.812 80.5543 19.212C80.5543 19.572 80.4543 19.896 80.2543 20.184C80.0543 20.472 79.7703 20.7 79.4023 20.868C79.0423 21.028 78.6263 21.108 78.1543 21.108ZM85.8599 14.304C86.3559 14.304 86.8039 14.412 87.2039 14.628C87.6039 14.836 87.9159 15.152 88.1399 15.576C88.3719 16 88.4879 16.516 88.4879 17.124V21H87.4079V17.28C87.4079 16.624 87.2439 16.124 86.9159 15.78C86.5879 15.428 86.1399 15.252 85.5719 15.252C84.9959 15.252 84.5359 15.432 84.1919 15.792C83.8559 16.152 83.6879 16.676 83.6879 17.364V21H82.5959V12.12H83.6879V15.36C83.9039 15.024 84.1999 14.764 84.5759 14.58C84.9599 14.396 85.3879 14.304 85.8599 14.304ZM90.3637 17.688C90.3637 17.016 90.4997 16.428 90.7717 15.924C91.0437 15.412 91.4157 15.016 91.8877 14.736C92.3677 14.456 92.8997 14.316 93.4837 14.316C94.0597 14.316 94.5597 14.44 94.9837 14.688C95.4077 14.936 95.7237 15.248 95.9317 15.624V14.424H97.0357V21H95.9317V19.776C95.7157 20.16 95.3917 20.48 94.9597 20.736C94.5357 20.984 94.0397 21.108 93.4717 21.108C92.8877 21.108 92.3597 20.964 91.8877 20.676C91.4157 20.388 91.0437 19.984 90.7717 19.464C90.4997 18.944 90.3637 18.352 90.3637 17.688ZM95.9317 17.7C95.9317 17.204 95.8317 16.772 95.6317 16.404C95.4317 16.036 95.1597 15.756 94.8157 15.564C94.4797 15.364 94.1077 15.264 93.6997 15.264C93.2917 15.264 92.9197 15.36 92.5837 15.552C92.2477 15.744 91.9797 16.024 91.7797 16.392C91.5797 16.76 91.4797 17.192 91.4797 17.688C91.4797 18.192 91.5797 18.632 91.7797 19.008C91.9797 19.376 92.2477 19.66 92.5837 19.86C92.9197 20.052 93.2917 20.148 93.6997 20.148C94.1077 20.148 94.4797 20.052 94.8157 19.86C95.1597 19.66 95.4317 19.376 95.6317 19.008C95.8317 18.632 95.9317 18.196 95.9317 17.7ZM100.473 12.12V21H99.381V12.12H100.473Z" fill="#1F384C"/>
+                    <g opacity="0.5">
+                        <path d="M162.001 21.0938L167.009 16.0854L165.831 14.9062L162.001 18.7396L158.171 14.9062L156.992 16.0846L162.001 21.0938Z" fill="#1F384C"/>
+                    </g>
+                    <path d="M210.4 24C209.517 23.9957 208.801 23.2831 208.792 22.4H211.992C211.994 22.6139 211.953 22.826 211.872 23.024C211.662 23.5056 211.233 23.8569 210.72 23.968H210.716H210.704H210.69H210.682C210.589 23.9874 210.495 23.9981 210.4 24ZM216.8 21.6H204V20L205.6 19.2V14.8C205.558 13.6713 205.813 12.5513 206.339 11.552C206.863 10.6252 207.759 9.9671 208.8 9.744V8H212V9.744C214.063 10.2352 215.2 12.0304 215.2 14.8V19.2L216.8 20V21.6Z" fill="#B0C3CC"/>
+                    <circle cx="215" cy="9.77734" r="3.6" fill="#EC5252" stroke="white" stroke-width="1.2"/>
+                </svg>
+
+            </div>
+        </header>
+        <hr>
+
+        <section class="dashboard1">
+            <div class="cards">
+                <div class="ipo-dashboard">
+                    <div class="dashboard-header">
+                        <h2>Upcoming IPO | Dashboard</h2>
+                        <button class="register-btn">Register IPO</button>
+                    </div>
+
+                    <div class="ipo-table">
+                        <div class="ipo-row header">
+                            <div>Company</div>
+                            <div>Price Band</div>
+                            <div>Open</div>
+                            <div>Close</div>
+                            <div>Issue Size</div>
+                            <div>Issue Type</div>
+                            <div>Listing Date</div>
+                            <div>Status</div>
+                            <div>Action</div>
+                            <div>Delete/View</div>
+                        </div>
+
+                        <div class="ipo-row">
+                            <div>Adani Power</div>
+                            <div>₹129 - 136</div>
+                            <div>2024-06-03</div>
+                            <div>2024-06-05</div>
+                            <div>130.15 Cr.</div>
+                            <div>Book Built</div>
+                            <div>2024-06-10</div>
+                            <div><span class="status ongoing">Ongoing</span></div>
+                            <div><button class="update-btn">Update</button></div>
+                            <div>
+                                <i class="fa-solid fa-trash delete-icon"></i>
+                                <i class="fa-solid fa-eye view-icon"></i>
+                            </div>
+                        </div>
+
+                        <div class="ipo-row">
+                            <div>VBL LTD</div>
+                            <div>₹129 - 136</div>
+                            <div>2024-06-03</div>
+                            <div>2024-06-05</div>
+                            <div>130.15 Cr.</div>
+                            <div>Book Built</div>
+                            <div>2024-06-10</div>
+                            <div><span class="status coming">Coming</span></div>
+                            <div><button class="update-btn">Update</button></div>
+                            <div>
+                                <i class="fa-solid fa-trash delete-icon"></i>
+                                <i class="fa-solid fa-eye view-icon"></i>
+                            </div>
+                        </div>
+
+                        <div class="ipo-row">
+                            <div>Tata Motor</div>
+                            <div>₹129 - 136</div>
+                            <div>2024-06-03</div>
+                            <div>2024-06-05</div>
+                            <div>130.15 Cr.</div>
+                            <div>Book Built</div>
+                            <div>2024-06-10</div>
+                            <div><span class="status new-listed">New Listed</span></div>
+                            <div><button class="update-btn">Update</button></div>
+                            <div>
+                                <i class="fa-solid fa-trash delete-icon"></i>
+                                <i class="fa-solid fa-eye view-icon"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pagination">
+                        <span class="page-btn prev">&lt;</span>
+                        <span class="page-btn active">1</span>
+                        <span class="page-btn">2</span>
+                        <span class="page-btn">...</span>
+                        <span class="page-btn">9</span>
+                        <span class="page-btn">10</span>
+                        <span class="page-btn next">&gt;</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
